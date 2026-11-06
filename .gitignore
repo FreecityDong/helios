@@ -1,0 +1,55 @@
+# Local product documents and agent planning records
+/docs/
+/.planning/
+/task_plan.md
+/findings.md
+/progress.md
+/.plan-attestation
+/AGENTS.md
+/SKILL.md
+/.agents/
+/.codex/
+/.claude/
+
+# Build output, generated artifacts and caches
+.gradle/
+.kotlin/
+**/build/
+/artifacts/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+coverage/
+*.log
+*.hprof
+*.heapdump
+
+# IDE and machine-specific files
+.idea/
+.vscode/
+*.iml
+local.properties
+.DS_Store
+._*
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Private runtime configuration and signing material
+.secrets/
+.env
+.env.*
+!.env.example
+scene-config.json
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+
+# Keep runtime models, the camera SDK and the Gradle wrapper tracked.

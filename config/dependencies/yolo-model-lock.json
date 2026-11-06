@@ -1,0 +1,36 @@
+{
+  "model": "YOLOv8n COCO 80 classes",
+  "checkpointSource": "https://github.com/ultralytics/assets/releases/download/v8.3.0/yolov8n.pt (downloaded and SHA-256 matches local checkpoint)",
+  "checkpointSha256": "f59b3d833e2ff32e194b5bb8e08d211dc7c5bdf144b90d2c8412c47ccfc83b36",
+  "asset": "app/src/main/assets/yolo/yolov8n-320.onnx",
+  "assetSha256": "ed871810ee1c815c635bb36520f33984c501c3a2e1fb61cdd29b634aba34d232",
+  "comparison416": {
+    "asset": "app/src/main/assets/yolo/yolov8n-416.onnx",
+    "assetSha256": "036b852fad564e099c52e16a56b402f166ac36fd1391eb7a73f0bf76f2e58786",
+    "checkpointSha256": "f59b3d833e2ff32e194b5bb8e08d211dc7c5bdf144b90d2c8412c47ccfc83b36",
+    "exportEnvironment": {"ultralytics": "8.3.0", "torch": "2.9.1", "onnx": "1.17.0", "opset": 17, "dynamo": false},
+    "input": "images float32 [1,3,416,416], RGB/255, centered letterbox 114",
+    "output": "[1,84,3549], xywh pixels + 80 class scores; no objectness column",
+    "postprocess": "same confidence 0.35, class-aware NMS IoU 0.45 and 30 detections as 320 baseline"
+  },
+  "comparisonYolo26n416": {
+    "checkpointSource": "https://github.com/ultralytics/assets/releases/download/v8.4.0/yolo26n.pt",
+    "checkpointSha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "asset": "app/src/main/assets/yolo/yolo26n-416.onnx",
+    "assetSha256": "e3e962651c1abeac4f26a559bbc00cfca6367183ce3852d7cbf567ff311c4096",
+    "exportEnvironment": {"ultralytics": "8.4.14", "torch": "2.9.1", "onnx": "1.17.0", "opset": 17, "dynamo": false, "end2end": false, "nms": false},
+    "input": "images float32 [1,3,416,416], RGB/255, centered letterbox 114",
+    "output": "[1,84,3549], raw one-to-many xywh pixels + 80 COCO class scores",
+    "postprocess": "same confidence 0.35, class-aware NMS IoU 0.45 and 30 detections as YOLOv8n-416 baseline"
+  },
+  "export": { "ultralytics": "8.3.0", "torch": "2.14.1", "onnx": "1.17.0", "opset": 17, "dynamo": false, "dynamic": false, "simplify": false },
+  "input": "images float32 [1,3,320,320], RGB/255, centered letterbox 114",
+  "output": "[1,84,2100], xywh pixels + 80 class scores; no objectness column",
+  "postprocess": { "confidence": 0.35, "classAwareNmsIou": 0.45, "maxCandidates": 300, "maxDetections": 30 },
+  "depthDistance_v0_4_2": "Inner 80% of box; significant partial overlap returns unknown; nested overlaps assigned to smaller detection; connected depth surface with >=max(8,3% valid samples); nearest surface 10th percentile; min 50% valid depth, 0.2-10 m",
+  "androidRuntime": "com.microsoft.onnxruntime:onnxruntime-android:1.20.0",
+  "execution": "XNNPACK 4 threads (verified on target phone), ORT intraOp=1; fallback CPU intraOp=2; interOp=1, spinning disabled, bulk input copy.",
+  "license": "Ultralytics AGPL-3.0; ONNX Runtime MIT",
+  "phoneValidated": true,
+  "validationScope": "vivo V2454A: model loads, boxes and depth estimates render; optimized XNNPACK short-run around 30 FPS; three-class accuracy and measured distance errors not validated"
+}

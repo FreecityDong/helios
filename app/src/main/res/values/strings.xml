@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Helios</string>
+    <style name="Theme.Helios" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:colorAccent">#205C4C</item>
+    </style>
+</resources>

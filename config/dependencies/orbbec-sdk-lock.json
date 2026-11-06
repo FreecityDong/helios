@@ -1,0 +1,16 @@
+{
+  "repository": "https://github.com/orbbec/OrbbecSDK-Android-Wrapper",
+  "developmentBranch": "v2-main",
+  "candidateTag": "v2.0.6",
+  "commit": "b7252b7ae2d648d30f8d77c6caf7f14f6b1df816",
+  "sampleFile": "OrbbecSdkExamples_v2.0.6_2026031801_release.apk",
+  "sampleUrl": "https://github.com/orbbec/OrbbecSDK-Android-Wrapper/releases/download/v2.0.6/OrbbecSdkExamples_v2.0.6_2026031801_release.apk",
+  "sampleSha256": "d961f89082a5e19e0c24dc22de0dd20d18b5759ecdf9bc971a4926aed1d42877",
+  "aarFile": "app/libs/obsensor_v2.0.6_2026031801_release.aar",
+  "aarSha256": "4a9b6d3297e2e60a9cfb5e7c2e06793f41cb12c7a6357b54acb63561ca3af9bb",
+  "targetPhoneValidated": true,
+  "validationScope": "Helios 0.3.0: RGB, depth, accel, gyro and stop frame release; physical hotplug and 15-minute endurance not verified; standalone sample APK not validated",
+  "observedCoreVersion": "2.7.6",
+  "observedFirmware": "1.4.92",
+  "gemini2MinimumFirmwareFromReadme": "1.4.92"
+}

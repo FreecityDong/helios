@@ -1,0 +1,30 @@
+{
+  "wakeEngine": {
+    "name": "Vosk Android",
+    "version": "0.3.75",
+    "source": "https://repo1.maven.org/maven2/com/alphacephei/vosk-android/0.3.75/",
+    "license": "Apache-2.0"
+  },
+  "wakeModel": {
+    "name": "vosk-model-small-en-us-0.15",
+    "source": "https://alphacephei.com/vosk/models/vosk-model-small-en-us-0.15.zip",
+    "sha256": "30f26242c4eb449f948e42cb302dd7a686cb29a3423a8367f99ff41780942498",
+    "license": "Apache-2.0",
+    "assetDirectory": "app/src/main/assets/model-en-us",
+    "grammar": ["hi helios", "[unk]"],
+    "sampleRateHz": 16000,
+    "validatedOnTargetPhone": false
+  },
+  "commandAsr": {
+    "api": "Vosk Android",
+    "model": "vosk-model-small-cn-0.22",
+    "modelSource": "https://alphacephei.com/vosk/models/vosk-model-small-cn-0.22.zip",
+    "modelSha256": "3af8b0e7e0f835ae9d414ce5df580237a3cfb08d586c9fbbb0f7ff29ad5b14ba",
+    "license": "Apache-2.0",
+    "targetLocale": "zh-CN",
+    "windowMs": 6000,
+    "offlineGuarantee": true,
+    "fallbackReason": "vivo system RecognitionService returned ERROR_CLIENT on target phone",
+    "validatedOnTargetPhone": false
+  }
+}
